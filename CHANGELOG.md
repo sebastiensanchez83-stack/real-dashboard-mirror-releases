@@ -1,0 +1,14 @@
+# Changelog
+
+## V1.0 Free Beta
+
+- Windows single-file EXE distribution.
+- Windows portable fallback ZIP.
+- Android Viewer APK for LAN viewing.
+- Browser viewer at `http://<pc-lan-ip>:5055/`.
+- TV browser route with quality controls.
+- Bottom overscan workflow for sim racing dashboards.
+- AC EVO and iRacing-oriented game window helpers.
+- Free mode with 10 minutes per capture session.
+- Beta license unlock path for unlimited capture during the beta.
+
