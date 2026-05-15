@@ -4,6 +4,7 @@
 
 - QR codes use the plain LAN viewer URL instead of an Android-only intent link.
 - TV viewer includes a `Phone mode` button to return to the normal phone/browser viewer.
+- Closing the Windows app now stops viewer/capture cleanup and exits the process reliably.
 - Windows single-file EXE distribution.
 - Windows portable fallback ZIP.
 - Android Viewer APK for LAN viewing.
