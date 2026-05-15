@@ -28,7 +28,9 @@ Recommended download:
 6. Confirm the hidden dashboard area appears in the preview.
 7. Adjust and validate the crop.
 8. Start the phone/TV viewer.
-9. Open the displayed LAN URL, for example `http://192.168.x.x:5055/`.
+9. Scan the QR code or open the displayed LAN URL, for example `http://192.168.x.x:5055/`.
+
+The QR code contains the plain LAN URL, not an Android-only `intent://` link, so it works with phones, tablets, TV browsers, and generic QR scanners.
 
 For TV browsers, try:
 
@@ -45,4 +47,3 @@ Compatibility depends on how each game renders oversized or hidden window region
 ## Repository Scope
 
 This public repository is for downloads, release notes, and marketing/user-facing files only. Source code is not published here.
-
