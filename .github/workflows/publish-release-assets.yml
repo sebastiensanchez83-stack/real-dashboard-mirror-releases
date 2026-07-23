@@ -15,33 +15,26 @@ jobs:
       - name: Checkout release asset branch
         uses: actions/checkout@v4
 
-      - name: Validate release metadata
-        run: |
-          test -f release-metadata.json
-          test -f release-notes.md
-          test -d release-assets
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          meta = json.loads(Path('release-metadata.json').read_text(encoding='utf-8'))
-          required = ['tag', 'title']
-          missing = [key for key in required if not meta.get(key)]
-          if missing:
-              raise SystemExit(f"Missing release metadata: {', '.join(missing)}")
-          assets = sorted(Path('release-assets').glob('*'))
-          if not assets:
-              raise SystemExit('No files found in release-assets/')
-          PY
-
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          TAG=$(python -c "import json; print(json.load(open('release-metadata.json', encoding='utf-8'))['tag'])")
-          TITLE=$(python -c "import json; print(json.load(open('release-metadata.json', encoding='utf-8'))['title'])")
-          PRERELEASE=$(python -c "import json; print(str(json.load(open('release-metadata.json', encoding='utf-8')).get('prerelease', True)).lower())")
+          test -f release-metadata.json
+          test -f release-notes.md
+          test -d release-assets
+
+          TAG=$(python3 -c "import json; print(json.load(open('release-metadata.json', encoding='utf-8'))['tag'])")
+          TITLE=$(python3 -c "import json; print(json.load(open('release-metadata.json', encoding='utf-8'))['title'])")
+          PRERELEASE=$(python3 -c "import json; print(str(json.load(open('release-metadata.json', encoding='utf-8')).get('prerelease', True)).lower())")
+
+          shopt -s nullglob
+          ASSETS=(release-assets/*)
+          if [ ${#ASSETS[@]} -eq 0 ]; then
+            echo "No release assets found."
+            exit 1
+          fi
 
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release edit "$TAG" --title "$TITLE" --notes-file release-notes.md --draft=false
@@ -53,4 +46,4 @@ jobs:
             fi
           fi
 
-          gh release upload "$TAG" release-assets/* --clobber
+          gh release upload "$TAG" "${ASSETS[@]}" --clobber
