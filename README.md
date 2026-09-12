@@ -6,11 +6,11 @@ Your simracing dashboard, on your phone, tablet, TV or HDMI display.
 RealDash Mirror captures a Windows game window and sends selected dashboard
 regions to local devices. Three independent crops: Dash, Output 2 and Output 3.
 
-## Download 1.0.6 - Pitlane
+## Download 1.0.7 - Pitlane fixes
 
-- [Windows Free portable EXE ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-6ef17be6f6d29e5a00d8/RealDashMirror-v1.0.6-Free-17da6a9d-SingleFile.zip)
-- [Windows Free portable fallback ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-6ef17be6f6d29e5a00d8/RealDashMirror-v1.0.6-Free-17da6a9d-PortableFallback.zip)
-- [Release notes and checksums](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/tag/v1.0.6)
+- [Windows Free portable EXE ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-cc4a7c32c29a5f0dc487/RealDashMirror-v1.0.7-Free-4278cacf-SingleFile.zip)
+- [Windows Free portable fallback ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-cc4a7c32c29a5f0dc487/RealDashMirror-v1.0.7-Free-4278cacf-PortableFallback.zip)
+- [Release notes and checksums](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/tag/v1.0.7)
 - [Android Viewer APK (unchanged, compatible)](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/v1.0.5-free-beta/RealDashMirrorViewer-V1.0.5-Free-Android-debug.apk)
 
 ## Quick start
@@ -18,7 +18,9 @@ regions to local devices. Three independent crops: Dash, Output 2 and Output 3.
 1. Extract the Windows ZIP and launch DashMirrorOverscan.exe.
 2. Open Pitlane and select your running game, or apply a saved car profile.
 3. Adjust Area below the screen, then Apply and continue.
-4. Frame Dash and any enabled Output 2/3 crops. Choose network viewing and/or HDMI.
+4. Frame Dash and any enabled Output 2/3 crops. Network links are shown per output.
+   HDMI is optional: enable it and select secondary displays only. The primary
+   display is reserved for the game.
 5. Confirm crops, then Launch my session. Mini Pin opens automatically when enabled.
 6. In Settings, scan the QR or open the displayed LAN URL on your phone or TV.
 
