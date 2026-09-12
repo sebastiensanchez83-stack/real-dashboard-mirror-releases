@@ -1,5 +1,15 @@
 # Changelog
 
+## V1.0.7 - Pitlane fixes
+
+- Fixed EVO selection independently of advanced filters and readable source names.
+- Visible network links for Dash, Output 2 and Output 3.
+- Optional HDMI on secondary displays only; no primary-display fallback.
+- Output destination validation before session launch.
+- 101 tests passed and live EVO validation; Android Viewer unchanged.
+
+
+
 ## V1.0.6 - Pitlane
 
 - Guided Pitlane workspace with saved car profiles.
