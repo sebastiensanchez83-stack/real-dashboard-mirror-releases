@@ -1,5 +1,14 @@
 # Changelog
 
+## V1.0.6 - Pitlane
+
+- Guided Pitlane workspace with saved car profiles.
+- Area below the screen slider beside the preview.
+- Three output crops, final confirmation and optional automatic Mini Pin.
+- Preserved live text bindings and fixed second-instance shutdown.
+
+
+
 ## V1.0.5 Free Beta
 
 - Restored online Pro license activation on the new Supabase project.
