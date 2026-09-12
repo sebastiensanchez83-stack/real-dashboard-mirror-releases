@@ -1,49 +1,43 @@
-# Real Dashboard Mirror
+# RealDash Mirror
 
-![Real Dashboard Mirror](assets/real-dashboard-mirror-logo-horizontal.png)
+![RealDash Mirror](assets/real-dashboard-mirror-logo-horizontal.png)
 
-Real Dashboard Mirror is a beta tool for sim racers who want to stream a hidden dashboard area from a Windows racing game to an Android phone, tablet, or TV browser on the local network.
+Your simracing dashboard, on your phone, tablet, TV or HDMI display.
+RealDash Mirror captures a Windows game window and sends selected dashboard
+regions to local devices. Three independent crops: Dash, Output 2 and Output 3.
 
-The Windows app runs the capture and local stream server. The Android app and browser viewer are viewers only; they do not capture the game and do not use telemetry, WebRTC, or cloud services.
+## Download 1.0.6 - Pitlane
 
-## Download
+- [Windows Free portable EXE ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-6ef17be6f6d29e5a00d8/RealDashMirror-v1.0.6-Free-17da6a9d-SingleFile.zip)
+- [Windows Free portable fallback ZIP](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/untagged-6ef17be6f6d29e5a00d8/RealDashMirror-v1.0.6-Free-17da6a9d-PortableFallback.zip)
+- [Release notes and checksums](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/tag/v1.0.6)
+- [Android Viewer APK (unchanged, compatible)](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/download/v1.0.5-free-beta/RealDashMirrorViewer-V1.0.5-Free-Android-debug.apk)
 
-Get the latest public beta from the GitHub Releases page:
+## Quick start
 
-[Real Dashboard Mirror V1.0.5 Free Beta](https://github.com/sebastiensanchez83-stack/real-dashboard-mirror-releases/releases/tag/v1.0.5-free-beta)
+1. Extract the Windows ZIP and launch DashMirrorOverscan.exe.
+2. Open Pitlane and select your running game, or apply a saved car profile.
+3. Adjust Area below the screen, then Apply and continue.
+4. Frame Dash and any enabled Output 2/3 crops. Choose network viewing and/or HDMI.
+5. Confirm crops, then Launch my session. Mini Pin opens automatically when enabled.
+6. In Settings, scan the QR or open the displayed LAN URL on your phone or TV.
 
-Recommended download:
+Browser viewer: `http://<pc-lan-ip>:5055/` on the same LAN.
+For TV browsers: `http://<pc-lan-ip>:5055/tv?fps=30&w=1280`.
+Use Restore game to return to normal window placement.
 
-- `RealDashMirror-V1.0.5-Free-Exe.zip` for Windows.
-- `RealDashMirrorViewer-V1.0.5-Free-Android-debug.apk` for Android sideloading.
-- `RealDashMirror-V1.0.5-Free-PortableFallback.zip` if the single-file EXE does not run on your machine.
+## Free and Pro
 
-## Quick Start
+Free capture is limited to 10 minutes per session. A valid Pro license unlocks
+unlimited capture. The Android app and browser pages are viewers only.
 
-1. Launch the Windows app.
-2. Start your racing game in windowed or borderless mode.
-3. Select the game/source in DashMirror.
-4. Apply the recommended bottom overscan preset.
-5. Refresh the game resolution or placement.
-6. Confirm the hidden dashboard area appears in the preview.
-7. Adjust and validate the dashboard crop.
-8. Start the phone/TV viewer.
-9. Scan the QR code or open the displayed LAN URL, for example `http://192.168.x.x:5055/`.
+## Compatibility
 
-The QR code contains the plain LAN URL, not an Android-only `intent://` link, so it works with phones, tablets, TV browsers, and generic QR scanners.
+Windows capture, oversized rendering and performance depend on the game and GPU.
+Some games do not draw the hidden area even when the window can be resized.
+The app does not inject into games or modify EDID or Windows display topology.
 
-For TV browsers, try:
+## Repository scope
 
-```text
-http://<pc-lan-ip>:5055/tv?fps=60&w=1280
-```
-
-## Beta Limits
-
-The Free Beta includes a 10 minute capture-session limit. A Pro beta license unlock can enable unlimited capture during the beta period.
-
-Compatibility depends on how each game renders oversized or hidden window regions. Some games may resize the window but not render useful content in the hidden overscan area.
-
-## Repository Scope
-
-This public repository is for downloads, release notes, and marketing/user-facing files only. Source code is not published here.
+This public repository contains downloads, release notes and user-facing media.
+The application source repository remains private.
